@@ -1,16 +1,28 @@
-# React + Vite
+# Akhil Kambhatla — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website showcasing my projects, research publications, technical skills, and professional experience.
 
-Currently, two official plugins are available:
+**Live Site:** [akhil-kambhatla.github.io/portfolio](https://akhil-kambhatla.github.io/portfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built With
 
-## React Compiler
+- React + Vite
+- Framer Motion (animations)
+- React Router (navigation)
+- EmailJS (contact form)
+- GitHub Pages (hosting)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Modern glassmorphism design with animated gradient background
+- Interactive project cards with detailed modals
+- Research & publications showcase
+- Horizontal experience timeline with flowing animation
+- Functional contact form powered by EmailJS
+- Fully responsive across all devices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contact
+
+- Email: akhilkambhatla.work@gmail.com
+- LinkedIn: [linkedin.com/in/akhil-kambhatla](https://www.linkedin.com/in/akhil-kambhatla-b4914826a/)
+- GitHub: [github.com/Akhil-Kambhatla](https://github.com/Akhil-Kambhatla)
