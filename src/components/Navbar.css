@@ -1,0 +1,166 @@
+/* ============================================
+   Navbar
+   ============================================ */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10, 10, 26, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================
+   Logo
+   ============================================ */
+.navbar-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   Nav Links
+   ============================================ */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-link-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  border-radius: 1px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffffff;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-link--active {
+  color: #06b6d4;
+}
+
+.navbar-link--active::after {
+  width: 100%;
+}
+
+/* ============================================
+   Hamburger (hidden on desktop)
+   ============================================ */
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 4px;
+  line-height: 1;
+}
+
+.navbar-hamburger.open {
+  transform: rotate(90deg);
+}
+
+/* ============================================
+   Mobile Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .navbar-inner {
+    padding: 14px 20px;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(10, 10, 26, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px 0;
+  }
+
+  .navbar-links--open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-link {
+    padding: 14px 24px;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .navbar-link::after {
+    display: none;
+  }
+
+  .navbar-link--active {
+    background: rgba(6, 182, 212, 0.08);
+  }
+}

@@ -1,0 +1,254 @@
+/* ============================================
+   Projects Page
+   ============================================ */
+.projects-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* ============================================
+   Projects Grid
+   ============================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ============================================
+   Project Card
+   ============================================ */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+}
+
+/* Category-specific hover glows */
+.project-card:has(.badge-ds):hover {
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.12);
+}
+
+.project-card:has(.badge-cv):hover {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.12);
+}
+
+.project-card:has(.badge-genai):hover {
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.12);
+}
+
+.project-card:has(.badge-ml):hover {
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.12);
+}
+
+.project-card:has(.badge-dl):hover {
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.12);
+}
+
+.project-card:has(.badge-timeseries):hover {
+  box-shadow: 0 8px 32px rgba(249, 115, 22, 0.12);
+}
+
+/* ============================================
+   Card Top Row (badge + sparkle)
+   ============================================ */
+.project-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-badge {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.project-sparkle {
+  font-size: 1rem;
+  opacity: 0.4;
+}
+
+/* ============================================
+   Card Content
+   ============================================ */
+.project-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 12px;
+}
+
+.project-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================
+   Tech Stack Tags
+   ============================================ */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-muted);
+}
+
+.project-tag--extra {
+  color: var(--color-text-muted);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   Card Links
+   ============================================ */
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #06b6d4;
+}
+
+/* ============================================
+   Modal Body (Project-specific)
+   ============================================ */
+.modal-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+.modal-desc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-tag {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   Modal Links
+   ============================================ */
+.modal-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.modal-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-link-btn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #06b6d4;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 80px 16px 60px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    padding: 24px;
+    max-height: 85vh;
+  }
+
+  .modal-links {
+    flex-direction: column;
+  }
+
+  .modal-link-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
