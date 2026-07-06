@@ -6,16 +6,16 @@ import content from '../data/content'
 import './Research.css'
 
 function highlightAuthor(authors) {
-  const name = 'Akhil Kambhatla'
-  const idx = authors.indexOf(name)
-  if (idx === -1) return authors
-  return (
-    <>
-      {authors.slice(0, idx)}
-      <span className="research-author-highlight">{name}</span>
-      {authors.slice(idx + name.length)}
-    </>
-  )
+  const namesToHighlight = ['Akhil Kambhatla', 'A. Kambhatla']
+  const entries = authors.split(', ')
+  return entries.map((entry, i) => (
+    <span key={entry}>
+      {namesToHighlight.includes(entry)
+        ? <span className="research-author-highlight">{entry}</span>
+        : entry}
+      {i < entries.length - 1 ? ', ' : ''}
+    </span>
+  ))
 }
 
 function PubModal({ pub, onClose }) {

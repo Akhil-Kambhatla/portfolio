@@ -68,6 +68,18 @@
   border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
+.badge-quantum {
+  background: rgba(217, 70, 239, 0.15);
+  color: #d946ef;
+  border: 1px solid rgba(217, 70, 239, 0.3);
+}
+
+.badge-agentic {
+  background: rgba(132, 204, 22, 0.15);
+  color: #84cc16;
+  border: 1px solid rgba(132, 204, 22, 0.3);
+}
+
 [class^="badge-"] {
   padding: 4px 12px;
   border-radius: 9999px;

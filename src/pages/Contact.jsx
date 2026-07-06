@@ -52,8 +52,6 @@ function Contact() {
       message: form.message,
     }
 
-    console.log('EmailJS sending with params:', templateParams)
-
     const timeoutId = setTimeout(() => {
       setSending(false)
       setToast({ type: 'error' })
@@ -66,18 +64,15 @@ function Contact() {
       templateParams,
       '8Ot8CeRlCheucqYpG'
     )
-      .then((response) => {
+      .then(() => {
         clearTimeout(timeoutId)
-        console.log('SUCCESS!', response.status, response.text)
         setSending(false)
         setToast({ type: 'success' })
         setForm({ from_name: '', from_email: '', subject: '', message: '' })
         setTimeout(() => setToast(null), 3000)
       })
-      .catch((err) => {
+      .catch(() => {
         clearTimeout(timeoutId)
-        console.error('FAILED...', err)
-        console.error('Full error:', JSON.stringify(err))
         setSending(false)
         setToast({ type: 'error' })
         setTimeout(() => setToast(null), 5000)

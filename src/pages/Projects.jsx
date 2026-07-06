@@ -11,6 +11,8 @@ const categoryBadgeMap = {
   'Machine Learning': 'badge-ml',
   'Deep Learning': 'badge-dl',
   'Time Series': 'badge-timeseries',
+  'Quantum Machine Learning': 'badge-quantum',
+  'Agentic AI': 'badge-agentic',
 }
 
 const containerVariants = {
