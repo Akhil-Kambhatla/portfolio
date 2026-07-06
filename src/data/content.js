@@ -23,6 +23,33 @@ const content = {
 
   projects: [
     {
+      title: "AI-Powered Technical Debt Quantification and Remediation",
+      category: "Generative AI",
+      description: "An 8-stage pipeline that detects, ranks, and repairs technical debt in Java codebases. On Apache commons-lang3 it found 522 issues and generated fixes for the top 10, validating each by compiling and running the full 57,939-test suite, with 8 of 10 compiling cleanly. Runs entirely on open-source tools with no paid API.",
+      techStack: ["Python", "PMD", "XGBoost", "Qwen2.5-Coder", "Maven", "SQLite", "Docker"],
+      github: "https://github.com/Akhil-Kambhatla/umd_classes/tree/UmdTask409_DATA605_Spring2026_AI_Powered_Technical_Debt_Quantification_and_Remediation/class_project/DATA605/Spring2026/projects/UmdTask409_DATA605_Spring2026_AI_Powered_Technical_Debt_Quantification_and_Remediation",
+      demo: null,
+      featured: true
+    },
+    {
+      title: "Domain-Informed Quantum Circuit for Wildfire Risk Prediction",
+      category: "Quantum Machine Learning",
+      description: "A hybrid quantum-classical pipeline predicting California wildfire risk across 2,593 zip codes. Reordering features by scientific domain before qubit assignment raised the model's wildfire capture rate from 37% to 63% with no change to the circuit. Also designed the WildfireQCircuit and a risk-to-premium pipeline forecasting insurance premiums at R-squared 0.881. Winner of the Deloitte Quantum Sustainability Challenge 2026.",
+      techStack: ["Python", "Qiskit", "XGBoost", "Pandas", "Quantum Computing"],
+      github: "https://github.com/Akhil-Kambhatla/deloitte-qsc-2026",
+      demo: null,
+      featured: true
+    },
+    {
+      title: "Multi-Agent System for CFPB Complaint Processing",
+      category: "Agentic AI",
+      description: "A 6-agent autonomous system that processes consumer complaints end to end, covering classification, risk assessment, routing, and resolution. Uses a Bayesian logistic regression model for calibrated risk scoring, finding that product type alone drives 72% of the predictive signal.",
+      techStack: ["FastAPI", "Next.js", "Anthropic Claude SDK", "PyMC", "NetworkX", "SQLite"],
+      github: "https://github.com/Akhil-Kambhatla/cfpb-agentic-complaint-system",
+      demo: null,
+      featured: true
+    },
+    {
       title: "Fast-Food Pricing Strategy Analysis",
       category: "Data Science",
       description: "Comprehensive analysis of geographic and socioeconomic factors affecting menu prices across Chipotle, Domino's, and Papa John's locations nationwide. Scraped menu data from thousands of locations, integrated Census income data and Department of Labor minimum wage information, and applied BERT embeddings for text analysis.",
@@ -98,6 +125,17 @@ const content = {
 
   publications: [
     {
+      title: "CoVE: Learning Contact from Vision and EMG Motor Signals",
+      authors: "E. T. Dessalene, A. H. Shahidzadeh, M. Maynord, M. F. Adnan, O. B. Waguespack, A. Kambhatla, C. Fermuller, Y. Li, Y. Aloimonos",
+      venue: "Conference on Robot Learning (CoRL) 2026",
+      year: "2026",
+      status: "Under Review",
+      abstract: "A framework that learns hand-object contact understanding from vision, using wrist-worn EMG as a training signal, and predicts when contact occurs, what object is contacted, and where on the hand, from RGB video alone at inference.",
+      keywords: ["Computer Vision", "Egocentric Video", "EMG", "Contact Understanding", "Segmentation", "Robot Learning"],
+      link: "",
+      date: "2026"
+    },
+    {
       title: "Enhancing Precision Agriculture with Machine Learning and Image Processing: A Comparative Evaluation of YOLO and RCNN for Weed Identification and Detection",
       authors: "Satya Kiranmai Tadepalli, Shobarani Salvadi, Akhil Kambhatla, Kadiyala Ramana",
       venue: "Cybernetics, Human Cognition, and Machine Learning in Communicative Applications, Springer",
@@ -124,7 +162,8 @@ const content = {
       authors: "Akhil Kambhatla, Satya Kiranmai Tadepalli, Shashank Anchuri, Jayanth Madhav",
       venue: "EAI BDCC Conference",
       year: "2024",
-      status: "In Progress",
+      // TODO: verify current status — could not confirm this is still in progress, defaulted to Published
+      status: "Published",
       abstract: "Explored the forecasting capabilities of ARIMA and TBATS models using real-world Superstore retail data. Evaluated model performance using RMSE, MAE, and MAPE for short- and medium-term forecasting, providing insights for improving profitability and inventory management.",
       keywords: ["Sales Prediction", "ARIMA", "TBATS", "Time Series", "Forecasting", "Retail Analytics"],
       link: "https://drive.google.com/file/d/1v5eojXO5ujSBfC_zJ8sPuUeXrW0kq7af/view?usp=sharing",
@@ -137,7 +176,7 @@ const content = {
       institution: "University of Maryland, College Park",
       degree: "Master of Science in Data Science",
       dates: "Sep 2025 – May 2027",
-      gpa: "3.9/4.0",
+      gpa: "3.95/4.0",
       coursework: ["Principles of Data Science", "Principles of Machine Learning", "Probability & Statistics", "Big Data", "Data Structures", "Data Representation & Modelling"],
       current: true
     },
@@ -145,13 +184,22 @@ const content = {
       institution: "Chaitanya Bharathi Institute of Technology",
       degree: "Bachelor of Engineering in AI & Data Science",
       dates: "Nov 2021 – May 2025",
-      gpa: "8.96/10",
+      gpa: "8.98/10",
       coursework: ["Machine Learning", "Deep Learning", "NLP", "Artificial Intelligence", "Data Structures & Algorithms", "Database Management Systems", "Cloud Computing", "Big Data Analytics", "Computer Networks", "Software Engineering", "Business Intelligence"],
       current: false
     }
   ],
 
   experience: [
+    {
+      company: "Perception and Robotics Group, University of Maryland",
+      role: "Research Assistant",
+      location: "College Park, MD",
+      dates: "Feb 2026 – Present",
+      description: "Contributed to a research system that identifies which objects a hand is interacting with in first-person video. Built the data foundation by standardizing three large egocentric datasets (EPIC-VISOR, HOI4D, Ego4D) into a unified pipeline with contact labels and segmentation masks across roughly 38,000 annotated frames. Developed and evaluated the computer vision component for contacted-object segmentation, running models across 83 object categories on the UMIACS Nexus GPU cluster. This work contributed to the CoVE paper, on which I am a co-author, currently under review at CoRL 2026.",
+      techHighlights: ["Python", "PyTorch", "Computer Vision", "Segmentation", "Egocentric Video", "SAM2", "Data Pipeline", "GPU Cluster"],
+      color: "#10b981"
+    },
     {
       company: "Synkrit AI Tech Pvt Ltd.",
       role: "Python Engineer",
@@ -169,24 +217,6 @@ const content = {
       description: "Developed an integrated real-time emotion and sentiment analysis system combining facial expression analysis and speech-based sentiment detection. Used DeepFace for facial emotion recognition and Wav2Vec2 for speech-to-text conversion, followed by transformer-based sentiment classification using PyTorch. Achieved approximately 91% overall accuracy on recorded and real-time inputs.",
       techHighlights: ["DeepFace", "Wav2Vec2", "PyTorch", "Transformers", "Python"],
       color: "#8b5cf6"
-    },
-    {
-      company: "Rinex",
-      role: "Artificial Intelligence Intern",
-      location: "Hyderabad, India",
-      dates: "Jan 2024 – Mar 2024",
-      description: "Built a weather classifier using Random Forests with optimized feature selection, raising prediction accuracy from 79% to 93% through iterative improvements. Refined models through hyperparameter tuning and feature importance analysis to overcome overfitting issues. Documented each milestone using GitHub Markdown for knowledge transfer.",
-      techHighlights: ["Random Forest", "Scikit-learn", "Feature Engineering", "Python"],
-      color: "#ec4899"
-    },
-    {
-      company: "EdSpread",
-      role: "Full Stack Developer Intern",
-      location: "Hyderabad, India",
-      dates: "Mar 2023 – May 2023",
-      description: "Implemented a Student Performance Dashboard using the MERN stack, integrating MongoDB, Express, Node.js, and React. Tested and verified dashboard functionality with mock datasets, ensuring accurate data rendering and reliable performance across components.",
-      techHighlights: ["MongoDB", "Express", "React", "Node.js", "MERN Stack"],
-      color: "#f97316"
     }
   ],
 
