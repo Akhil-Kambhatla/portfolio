@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiGithub, FiExternalLink, FiX } from 'react-icons/fi'
+import { FiGithub, FiExternalLink, FiX, FiLinkedin, FiFileText } from 'react-icons/fi'
 import content from '../data/content'
 import './Projects.css'
 
@@ -89,6 +89,9 @@ function Projects() {
               </div>
 
               <h3 className="project-card-title">{project.title}</h3>
+              {project.banner && (
+                <span className="project-banner">{project.banner}</span>
+              )}
               <p className="project-card-desc">{project.description}</p>
 
               <div className="project-tags">
@@ -115,6 +118,30 @@ function Projects() {
                   >
                     <FiGithub />
                     <span>Code</span>
+                  </a>
+                )}
+                {project.linkedin && (
+                  <a
+                    href={project.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FiLinkedin />
+                    <span>Announcement</span>
+                  </a>
+                )}
+                {project.paper && (
+                  <a
+                    href={project.paper}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FiFileText />
+                    <span>Paper</span>
                   </a>
                 )}
                 {project.demo && (
@@ -173,6 +200,9 @@ function ProjectModal({ project, onClose }) {
         </span>
 
         <h2 className="modal-title">{project.title}</h2>
+        {project.banner && (
+          <span className="project-banner modal-banner">{project.banner}</span>
+        )}
         <p className="modal-desc">{project.description}</p>
 
         <h4 className="modal-tech-label gradient-text">Tech Stack</h4>
@@ -194,6 +224,28 @@ function ProjectModal({ project, onClose }) {
             >
               <FiGithub />
               <span>View Code</span>
+            </a>
+          )}
+          {project.linkedin && (
+            <a
+              href={project.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-link-btn"
+            >
+              <FiLinkedin />
+              <span>Announcement</span>
+            </a>
+          )}
+          {project.paper && (
+            <a
+              href={project.paper}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-link-btn"
+            >
+              <FiFileText />
+              <span>Paper</span>
             </a>
           )}
           {project.demo && (

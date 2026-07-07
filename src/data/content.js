@@ -36,7 +36,10 @@ const content = {
       category: "Quantum Machine Learning",
       description: "A hybrid quantum-classical pipeline predicting California wildfire risk across 2,593 zip codes. Reordering features by scientific domain before qubit assignment raised the model's wildfire capture rate from 37% to 63% with no change to the circuit. Also designed the WildfireQCircuit and a risk-to-premium pipeline forecasting insurance premiums at R-squared 0.881. Winner of the Deloitte Quantum Sustainability Challenge 2026.",
       techStack: ["Python", "Qiskit", "XGBoost", "Pandas", "Quantum Computing"],
+      banner: "🏆 Winners of Deloitte Quantum Sustainability Challenge 2026",
       github: "https://github.com/Akhil-Kambhatla/deloitte-qsc-2026",
+      linkedin: "https://www.linkedin.com/posts/akhil-kambhatla-b4914826a_i-am-extremely-happy-to-share-that-we-team-ugcPost-7477008054492762112-fe9_/",
+      paper: "https://drive.google.com/file/d/1kF3JleQf68hT6qoeuiHVYK4XzPuQxmKP/view?usp=drive_link",
       demo: null,
       featured: true
     },
@@ -132,7 +135,7 @@ const content = {
       status: "Under Review",
       abstract: "A framework that learns hand-object contact understanding from vision, using wrist-worn EMG as a training signal, and predicts when contact occurs, what object is contacted, and where on the hand, from RGB video alone at inference.",
       keywords: ["Computer Vision", "Egocentric Video", "EMG", "Contact Understanding", "Segmentation", "Robot Learning"],
-      link: "",
+      link: "https://drive.google.com/file/d/1Lcf0pRNB8m0Ru-pdikT08GDqrWbMSC79/view?usp=drive_link",
       date: "2026"
     },
     {
