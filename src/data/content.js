@@ -23,6 +23,15 @@ const content = {
 
   projects: [
     {
+      title: "Adversarial Voice QA Agent",
+      category: "Agentic AI",
+      description: "A speech-to-speech caller bot that dials a live healthcare voice agent over the real phone network and behaves like a patient instead of running a fixed script. It decides what to probe while the call is in progress, changes its requests mid-conversation, and carries state across calls so later calls can test what earlier ones set up. A real-time pipeline bridges a 24 kHz model to an 8 kHz telephone trunk, while a scenario planner writes its own test cases from what previous calls revealed. Every call is recorded as dual-channel audio, transcribed per speaker with timestamps, and passed to an analysis stage that produces severity-ranked bug reports tied to the transcript timestamp where each defect occurred.",
+      techStack: ["Python", "Pipecat", "Telnyx", "OpenAI Realtime API", "Deepgram Nova-3", "GPT-5.6", "WebSockets"],
+      github: "https://github.com/Akhil-Kambhatla/pgai-voice-qa",
+      demo: null,
+      featured: true
+    },
+    {
       title: "AI-Powered Technical Debt Quantification and Remediation",
       category: "Generative AI",
       description: "An 8-stage pipeline that detects, ranks, and repairs technical debt in Java codebases. On Apache commons-lang3 it found 522 issues and generated fixes for the top 10, validating each by compiling and running the full 57,939-test suite, with 8 of 10 compiling cleanly. Runs entirely on open-source tools with no paid API.",
